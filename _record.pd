@@ -1,4 +1,4 @@
-#N canvas 351 224 450 300 10;
+#N canvas 350 219 450 300 10;
 #X obj 18 101 r~ one/master/left;
 #X obj 136 101 r~ one/master/right;
 #X obj 18 166 writesf~ 2;
@@ -8,12 +8,17 @@
 #X obj 18 34 list;
 #X obj 271 126 sel 1;
 #X obj 271 103 >= 1;
-#X msg 271 150 \; pd quit \;;
+#X msg 271 180 \; pd quit \;;
+#X obj 271 148 t b b;
+#X msg 333 180 stop;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;
 #X connect 3 0 8 0;
 #X connect 4 0 6 0;
 #X connect 5 0 2 0;
 #X connect 6 0 5 0;
-#X connect 7 0 9 0;
+#X connect 7 0 10 0;
 #X connect 8 0 7 0;
+#X connect 10 0 9 0;
+#X connect 10 1 11 0;
+#X connect 11 0 2 0;
