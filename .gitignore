@@ -2,5 +2,6 @@ tracks/*.it
 tracks/**/*
 .*.swp
 *.wav
+*.mp3
 blockhead
 drillbit
