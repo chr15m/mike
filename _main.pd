@@ -1,0 +1,25 @@
+#N canvas 555 120 450 275 10;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X declare -path ./blockhead;
+#X obj 11 73 config-loader;
+#X obj 11 184 player one;
+#X obj 11 163 dispatch-config one;
+#X obj 11 205 mixer one;
+#X obj 182 157 r~ one/master/left;
+#X obj 182 239 dac~;
+#X obj 300 157 r~ one/master/right;
+#X msg 301 49 \; one/player/clear bang \; one/mixer/clear bang \;;
+#X msg 10 10 \; load-track bu-366d72cb635aab1bede253b96cb50e5dd191af89
+;
+#X obj 301 97 loadbang;
+#X msg 301 119 \; pd dsp 1 \;;
+#X connect 4 0 5 0;
+#X connect 6 0 5 1;
+#X connect 9 0 10 0;

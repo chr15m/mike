@@ -1,0 +1,6 @@
+tracks/*.it
+tracks/**/*
+.*.swp
+*.wav
+blockhead
+drillbit
