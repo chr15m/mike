@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$1" = "" ]
+then
+  echo "Usage: $0 track-name"
+else
+  pd -batch -send "load-track $1" _main.pd _record.pd
+fi

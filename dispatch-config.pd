@@ -1,11 +1,11 @@
-#N canvas 619 100 450 300 10;
-#X obj 12 242 r \$1/config/songdata-seed-int;
+#N canvas 618 95 450 300 10;
+#X obj 12 222 r \$1/config/songdata-seed-int;
 #X obj 12 264 s \$1/config/seed;
 #X obj 221 11 r \$1/config/seed-hash;
 #X obj 222 67 r \$1/config/channels;
 #X obj 222 259 print channels;
 #X obj 221 33 print seed-hash;
-#N canvas 877 251 450 300 load-stems 1;
+#N canvas 442 330 450 300 load-stems 1;
 #X obj 12 10 inlet;
 #X obj 304 9 inlet;
 #X obj 12 78 until;

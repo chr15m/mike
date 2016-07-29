@@ -1,4 +1,4 @@
-#N canvas 451 52 450 300 10;
+#N canvas 450 48 450 300 10;
 #N canvas 36 50 450 404 dynamic-player-builder 0;
 #X obj 9 8 inlet channels;
 #X obj 9 135 until;
@@ -38,7 +38,7 @@
 #X connect 13 0 16 0;
 #X connect 15 0 11 0;
 #X restore 15 66 pd dynamic-player-builder;
-#N canvas 2 48 450 300 \$0-player-units 0;
+#N canvas 2 48 450 300 \$0-player-units 1;
 #X restore 15 102 pd \$0-player-units;
 #X obj 15 44 r \$1/player/channels;
 #X obj 201 43 r \$1/player/clear;
