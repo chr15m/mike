@@ -1,11 +1,11 @@
-#N canvas 618 95 450 300 10;
+#N canvas 617 90 450 300 10;
 #X obj 12 222 r \$1/config/songdata-seed-int;
 #X obj 12 264 s \$1/config/seed;
 #X obj 221 11 r \$1/config/seed-hash;
 #X obj 222 67 r \$1/config/channels;
 #X obj 222 259 print channels;
 #X obj 221 33 print seed-hash;
-#N canvas 442 330 450 300 load-stems 1;
+#N canvas 442 330 450 300 load-stems 0;
 #X obj 12 10 inlet;
 #X obj 304 9 inlet;
 #X obj 12 78 until;
@@ -16,7 +16,7 @@
 #X obj 304 31 symbol;
 #X obj 12 122 list append;
 #X obj 12 144 list prepend \$1;
-#X msg 12 168 \; \$1/player/\$2/load-stem tracks/\$3/stem-\$2.wav;
+#X msg 12 168 \; \$1/player/\$2/load-stem \$3/stem-\$2.wav;
 #X connect 0 0 6 0;
 #X connect 1 0 7 0;
 #X connect 2 0 4 0;
@@ -42,15 +42,15 @@
 #X obj 11 32 t a a;
 #X obj 11 155 list append \$1;
 #X obj 38 53 s \$1/basename;
-#X msg 11 134 tracks/\$1/info.txt;
 #X obj 324 210 r \$1/basename;
+#X msg 11 134 \$1/info.txt;
 #X connect 0 0 1 0;
 #X connect 2 0 5 0;
 #X connect 3 0 12 0;
 #X connect 7 0 4 0;
 #X connect 7 1 6 0;
 #X connect 8 0 16 0;
-#X connect 10 0 19 0;
+#X connect 10 0 20 0;
 #X connect 12 0 7 0;
 #X connect 12 1 15 0;
 #X connect 12 2 11 0;
@@ -59,5 +59,5 @@
 #X connect 16 0 10 0;
 #X connect 16 1 18 0;
 #X connect 17 0 9 0;
-#X connect 19 0 17 0;
-#X connect 20 0 6 1;
+#X connect 19 0 6 1;
+#X connect 20 0 17 0;
